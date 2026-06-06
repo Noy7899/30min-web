@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>30min. Admin Demo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="admin-shell">
+    <header class="admin-header"><div><p class="eyebrow">30min. Admin</p><h1>管理画面デモ</h1></div><a class="admin-link" href="index.html">User site →</a></header>
+    <main class="admin-grid">
+      <section class="panel"><h2>Content作成デモ</h2><p class="muted">v0.5では保存せず、画面上の追加プレビューのみ。サーバー化後にDB保存へ置換。</p><div class="form-grid"><input id="contentTitle" placeholder="タイトル" /><select id="contentCategory"><option>Blog</option><option>Photo</option><option>Movie</option><option>Goods</option></select><textarea id="contentBody" placeholder="本文"></textarea><button id="addContentBtn" class="primary-btn">画面に追加</button></div></section>
+      <section class="panel"><h2>Reaction受信箱</h2><p class="muted">会員から届いたreactionを管理側だけが確認する想定。</p><div id="reactionInbox" class="list"></div></section>
+      <section class="panel wide"><h2>Contents一覧</h2><div id="adminContents" class="list"></div></section>
+    </main>
+  </div>
+  <script src="data/dummy-data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
