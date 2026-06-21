@@ -1,35 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>30min. Web v0.5</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>30min. Web Demo v0.7</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="site-shell">
     <aside class="sidebar">
-      <div class="brand"><p>30min.</p><h1>Fan Club</h1></div>
-      <nav class="desktop-nav">
+      <div class="brand"><div class="brand-mark">30</div><div><p>30min.</p><h1>Fan Portal</h1></div></div>
+      <nav class="desktop-nav" aria-label="Desktop navigation">
         <button class="nav-item active" data-tab="home">Home</button>
-        <button class="nav-item" data-tab="contents">Contents</button>
-        <button class="nav-item" data-tab="notifications">Notifications <span id="desktopBadge" class="badge-dot hidden"></span></button>
+        <div class="nav-menu-wrap"><button class="nav-item" id="desktopContentsBtn" type="button">Contents</button><div class="contents-popover hidden" id="desktopContentsMenu"><button data-content-category="Blog">Blog</button><button data-content-category="Photo">Photo</button><button data-content-category="Movie">Movie</button><button data-content-category="Goods">Goods</button></div></div>
+        <button class="nav-item" data-tab="notifications">Notifications <span class="badge-dot hidden" id="desktopBadge"></span></button>
         <button class="nav-item" data-tab="mypage">MyPage</button>
       </nav>
-      <a class="admin-link" href="admin.html">Admin demo →</a>
+      <a class="admin-link" href="./admin.html">Admin demo →</a>
     </aside>
     <main class="main-panel">
-      <header class="topbar"><div><p class="eyebrow">30min. Web v0.5</p><h2 id="pageTitle">Home</h2></div><div id="memberStatus" class="status-pill">Guest</div></header>
+      <header class="topbar"><div><p class="eyebrow">30min. Web Demo v0.7</p><h2 id="pageTitle">Home</h2></div><div class="topbar-actions"><div class="demo-switcher"><button id="demoSwitcherBtn" class="status-pill" type="button">Guest</button><div id="demoSwitcherMenu" class="demo-menu hidden"><button data-status="guest">Guest</button><button data-status="member">Member</button><button data-status="expired">Expired</button><button data-status="logout">Loginへ戻る</button></div></div></div></header>
       <section id="app" class="content-area"></section>
     </main>
-    <nav class="mobile-tabbar">
-      <button class="mobile-tab active" data-tab="home">Home</button>
-      <button class="mobile-tab" data-tab="contents">Contents</button>
-      <button class="mobile-tab" data-tab="notifications">Notify <span id="mobileBadge" class="badge-dot hidden"></span></button>
-      <button class="mobile-tab" data-tab="mypage">MyPage</button>
-    </nav>
+    <nav class="mobile-tabbar" aria-label="Mobile navigation"><button class="mobile-tab active" data-tab="home">Home</button><div class="mobile-content-wrap"><button class="mobile-tab" id="mobileContentsBtn" type="button">Contents</button><div class="mobile-content-menu hidden" id="mobileContentsMenu"><button data-content-category="Blog">Blog</button><button data-content-category="Photo">Photo</button><button data-content-category="Movie">Movie</button><button data-content-category="Goods">Goods</button></div></div><button class="mobile-tab" data-tab="notifications">Notify <span class="badge-dot hidden" id="mobileBadge"></span></button><button class="mobile-tab" data-tab="mypage">MyPage</button></nav>
   </div>
-  <script src="data/dummy-data.js"></script>
-  <script src="js/app.js"></script>
+  <script src="./data/dummy-data.js"></script><script src="./js/app.js"></script>
 </body>
 </html>
